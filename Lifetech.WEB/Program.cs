@@ -1,5 +1,5 @@
-using Lifetech.Business;
-using Lifetech.Models;
+using Lifetech.WEB.Business;
+using Lifetech.WEB.Models;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

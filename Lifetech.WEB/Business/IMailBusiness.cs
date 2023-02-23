@@ -1,6 +1,6 @@
-using Lifetech.Models;
+using Lifetech.WEB.Models;
 
-namespace Lifetech.Business;
+namespace Lifetech.WEB.Business;
 
 public interface IMailBusiness
 {

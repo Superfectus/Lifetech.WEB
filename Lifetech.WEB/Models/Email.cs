@@ -1,4 +1,4 @@
-namespace Lifetech.Models;
+namespace Lifetech.WEB.Models;
 
 public class Email
 {

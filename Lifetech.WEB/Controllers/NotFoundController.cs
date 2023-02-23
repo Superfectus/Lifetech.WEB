@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Lifetech.Controllers;
+namespace Lifetech.WEB.Controllers;
 
 public class NotFoundController : Controller
 {

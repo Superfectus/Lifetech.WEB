@@ -1,9 +1,9 @@
-using Lifetech.Business;
-using Lifetech.Models;
+using Lifetech.WEB.Business;
+using Lifetech.WEB.Models;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
-namespace Lifetech.Controllers
+namespace Lifetech.WEB.Controllers
 
 {
     [ApiController]

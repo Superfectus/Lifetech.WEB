@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace Lifetech.Models;
+namespace Lifetech.WEB.Models;
 
 public class AppDbContext : DbContext
 {

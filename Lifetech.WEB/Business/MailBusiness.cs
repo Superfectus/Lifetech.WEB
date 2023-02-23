@@ -1,9 +1,9 @@
-using Lifetech.Models;
+using Lifetech.WEB.Models;
 using MailKit.Net.Smtp;
 using Microsoft.AspNetCore.Mvc;
 using MimeKit;
 
-namespace Lifetech.Business;
+namespace Lifetech.WEB.Business;
 
 public class MailBusiness : IMailBusiness
 {

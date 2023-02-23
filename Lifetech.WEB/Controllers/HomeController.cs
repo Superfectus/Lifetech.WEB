@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
+using Lifetech.WEB.Models;
 using Microsoft.AspNetCore.Mvc;
-using Lifetech.Models;
 
-namespace Lifetech.Controllers;
+namespace Lifetech.WEB.Controllers;
 
 public class HomeController : Controller
 {
