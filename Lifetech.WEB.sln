@@ -1,6 +1,6 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lifetech", "Lifetech\Lifetech.csproj", "{E9C673A5-F833-4EE3-9746-B3CB3B5A007E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lifetech", "Lifetech.WEB\Lifetech.WEB.csproj", "{E9C673A5-F833-4EE3-9746-B3CB3B5A007E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
