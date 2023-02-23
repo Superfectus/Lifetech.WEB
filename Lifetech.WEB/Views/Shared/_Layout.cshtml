@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136269864-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-136269864-1');
+    </script>
+
+    <title>Lifetech | BT Dış Kaynak (Outsource) Danışmanlık | Yazılım </title>
+    <meta name="description" content="Lifetech Bilişim Teknolojileri">
+    <link rel="canonical" href="https://www.lifetechbilisim.com"/>
+
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="~/img/logos/logo-shortcut.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="yandex-verification" content="34db28f93b5d8350"/>
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap.min.css">
+
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" type="text/css" href="~/css/font-awesome.css">
+
+    <!-- Icomoon -->
+    <link rel="stylesheet" type="text/css" href="~/css/icomoon.css">
+
+    <!-- Pogo Slider -->
+    <link rel="stylesheet" href="~/css/pogo-slider.min.css">
+    <link rel="stylesheet" href="~/css/slider.css">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="~/css/animate.css">
+
+    <!-- Owl Carousel  -->
+    <link rel="stylesheet" href="~/css/owl.carousel.css">
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" type="text/css" href="~/css/default.css">
+    <link rel="stylesheet" type="text/css" href="~/css/styles.css">
+
+    <!-- Fonts Google -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+
+</head>
+<!--  Twitter Card data -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="[@@LifetechBilisim]">
+<meta name="twitter:title" content="[Smile for Technology]">
+<meta name="twitter:description" content="[BT Dışkaynak Kiralama ve Yazılım Geliştirme]">
+<meta name="twitter:creator" content="[@@LifetechBilisim]">
+<meta name="twitter:image" content="[https://lifetechbilisim.com/img/logos/logo.png]">
+
+
+<meta property="og:title" content="[Outsource ve Dışkaynak Hizmeti]"/>
+<meta property="og:type" content="[Outsource ve Dışkaynak Hizmeti]"/>
+<meta property="og:url" content="[https://lifetechbilisim.com/]"/>
+<meta property="og:image" content="[Outsource]"/>
+<meta property="og:description" content="[Dışkaynak]"/>
+<meta property="og:site_name" content="[www.lifetechbilisim.com]"/>
+<body>
+
+@await Html.PartialAsync("PartialHeader")
+
+@RenderBody()
+
+@await Html.PartialAsync("PartialFooter")
+
+<script src="~/js/jquery.min.js"></script>
+<script src="~/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="~/js/jquery.pogo-slider.min.js"></script>
+<script src="~/js/pogo-main.js"></script>
+<script src="~/js/owl.carousel.js"></script>
+<script type="text/javascript" src="~/js/wow.min.js"></script>
+<script src="~/js/jquery.counterup.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script type="text/javascript" src="~/js/isotope.pkgd.min.js"></script>
+<script type="text/javascript" src="~/js/tabs.min.js"></script>
+<script src="~/js/modernizr.js"></script>
+<script src="~/js/map.js"></script>
+<script src="~/js/main.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
