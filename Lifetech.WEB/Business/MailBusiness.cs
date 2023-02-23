@@ -27,7 +27,7 @@ public class MailBusiness : IMailBusiness
 
             var frommail = "bilgi@redefine.com.tr";
             var fromName = "Lifetech Bilişim (Bilgilendirme Servisi)";
-            var toBilgi = "erayal2001@gmail.com";
+            var toBilgi = "bilgi@lifetechbilisim.com";
 
             MimeMessage emailMessage = new MimeMessage();
             MailboxAddress emailFrom = new MailboxAddress(fromName, frommail);
