@@ -77,7 +77,7 @@
                                 <input type="email" name="emailAddress" id="emailAddress" placeholder="Mail Adresiniz *" required>
                             </div>
                             <div class="col-xs-12">
-                                <input type="phone" name="phoneNumber" id="phoneNumber" placeholder="Telefon Numaranız *" required>
+                                <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Telefon Numaranız *" required>
                             </div>
                             <div class="col-xs-12">
                                 <input type="text" name="subject" id="subject" placeholder="Konu *" required>
@@ -142,76 +142,73 @@
 </div>
 
 <script src="~/js/jquery.min.js"></script>
-
 <script>
 
-      $('#btnGonder').on('click', function() {
-                        
-                                var model = {
-                                    "name": $("#name").val(),
-                                    "emailAddress": $("#emailAddress").val(),
-                                    "phoneNumber": $("#phoneNumber").val(),
-                                    "firmName": $("#firmName").val(),
-                                    "subject": $("#subject").val(),
-                                    "message": $("#message").val()
-                                };
-                                //    sendemail(model).done(function(data){
-                                //        debugger;
-                                //        console.log(data)
-                                //        $('#FormContent').html("FORMUNUZ GÖNDERİLDİ")
-                        
-                                //    }).fail( $('#FormContent').html("FORMUNUZ GÖNDERİLEMEDİ"));
-                                sendemail(model);
-                            })
 
-      function sendemail(model) {
-                        
-                                // var thanksMessage = " <div class='thank-you-success'><i class='fa fa-check-circle mb-10' style='color: whitesmoke; font-size:50px'></i><h1 class='thank-you-h'>Teşekkürler!</h1><p class='thank-you-p'> Mesajınız başarıyla iletildi.</p></div>"
-                                var thanksMessage = " <div class='thank-you-success'><img src='img/check.gif' style='width: 15%; margin-bottom: 10px' alt='success'><h1 class='thank-you-h'>Teşekkürler!</h1><p class='thank-you-p'> Mesajınız başarıyla iletildi.</p></div>"
-                                var dangerMessage = " <div class='thank-you-danger'><h1 class='thank-you-h'>Beklenmedik Hata!</h1><p class='thank-you-p'> Lütfen daha sonra tekrar deneyin.</p></div>"
-                                  
-                                if ($("#name").val()!=="" && $("#emailAddress").val()!=="" && $("#phoneNumber").val()!=="" && $("#subject").val()!=="" && 
-                                $("#message").val()!==""){
-                                $.ajax({
-                                    url: "Mail/Contact",
-                                    type: "POST",
-                                    data: JSON.stringify(model),
-                                    // data: model,
-                                    contentType: "application/json; charset=utf-8",
-                        
-                                    // error: function (data) {
-                                    //    debugger;
-                                    //    $('#FormContent').html("FORMUNUZ GÖNDERİLEMEDİ");
-                                    // },
-                                    // success: function (data) { successFunction(data);
-                                    //    debugger;
-                                    //    $('#FormContent').html("FORMUNUZ BAŞARIYLA GÖNDERİLDİ.");
-                                    // },
-                                    
-                                    
-                                    beforeSend: function() {
-                                        // Perform preloading here, e.g. load an image
-                                        $('#preloader').show();
-                                    },
-                                    success: function(response) {
-                                        $('#FormContent').html(thanksMessage);
-                                        debugger;
-                                    },
 
-                                    error: function(response) {
-                                        $('#FormContent').html(dangerMessage);
-                                        debugger;
-                                    },
-                                    complete: function() {
-                                        // Hide preloader when AJAX request is complete
-                                        $('#preloader').hide();
-                                    }
-                                });
-                                }else{
-                                 swal('Hata','Zorunlu alanları doldurduğunuzdan emin olun!','error')
-                                }
-                       
-                            }
-              
+    $('#btnGonder').on('click', function() {
 
+        var model = {
+            "name": $("#name").val(),
+            "emailAddress": $("#emailAddress").val(),
+            "phoneNumber": $("#phoneNumber").val().replace("(", "").replace(")", "").replace("-", "").replace("_", "").replace(" ", "").trim(),    
+            "firmName": $("#firmName").val(),
+            "subject": $("#subject").val(),
+            "message": $("#message").val()
+        };
+
+        sendemail(model);
+    })
+
+ //  var phoneInput = document.getElementById('phoneNumber');
+ //
+ //    phoneInput.addEventListener('input', function (e) {
+ //     var value = e.target.value.replace(/\D/g, '');
+ //         var x = value.match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+ //     e.target.value = (value.charAt(0) !== '0') ? '0' + e.target.value : e.target.value;
+ //     e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+ // }); 
+
+    function sendemail(model) {
+
+        var thanksMessage = " <div class='thank-you-success'><img src='img/check.gif' style='width: 15%; margin-bottom: 10px' alt='success'><h1 class='thank-you-h'>Teşekkürler!</h1><p class='thank-you-p'> Mesajınız başarıyla iletildi.</p></div>"
+        var dangerMessage = " <div class='thank-you-danger'><h1 class='thank-you-h'>Beklenmedik Hata!</h1><p class='thank-you-p'> Lütfen daha sonra tekrar deneyin.</p></div>"
+
+        if ($("#name").val() == "") {
+            swal('Lütfen isim giriniz!', '', 'error')
+        } else if ($("#emailAddress").val() == "") {
+            swal('Lütfen email adresinizi giriniz!', '', 'error')
+        } else if ($("#phoneNumber").val() == "") {
+            swal('Lütfen telefon numaranızı giriniz!', '', 'error')
+        } else if ($("#subject").val() == "") {
+            swal('Lütfen konu alanını doldurunuz!ata', '', 'error')
+        } else if ($("#message").val() == "") {
+            swal('Lütfen mesaj alanını doldurunuz!', '', 'error')
+        } else {
+            $.ajax({
+                url: "Mail/Contact",
+                type: "POST",
+                data: JSON.stringify(model),
+                contentType: "application/json; charset=utf-8",
+
+                beforeSend: function() {
+                    $('#preloader').show();
+                },
+                success: function(response) {
+                    $('#FormContent').html(thanksMessage);
+                    debugger;
+                },
+
+                error: function(response) {
+                    $('#FormContent').html(dangerMessage);
+                    debugger;
+                },
+                complete: function() {
+                    $('#preloader').hide();
+                }
+            });
+        }
+    }
+  
 </script>
+
