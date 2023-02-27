@@ -89,7 +89,23 @@
                                 <button type="button" id="btnGonder" name="btnGonder" class="button button-primary mt-10 mb-10 btnGonder">Gönder</button>
                             </div>
 
+                            <html>
+                            <head>
+                                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+                            </head>
+                            <body>
+                                <form>
+                                    <input type="tel" id="phoneNumber" name="phoneNumber">
+                                </form>
 
+
+                                <script>
+                                    var phoneInput = document.getElementById('phoneNumber');
+                                    Inputmask("0(999) 999-9999").mask(phoneInput);
+                                </script>
+                            </body>
+                        </html>
 
 
                             <input type="hidden" name="_subject" value="İletişim formu dolduruldu.">
