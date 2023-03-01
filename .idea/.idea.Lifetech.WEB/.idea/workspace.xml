@@ -11,13 +11,16 @@
   <component name="ChangeListManager">
     <list default="true" id="17d22e73-982b-42c9-9449-539e258dfced" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Lifetech.WEB/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lifetech.WEB/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lifetech.WEB/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Lifetech.WEB/Views/Home/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lifetech.WEB/Views/Shared/PartialFooter.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Lifetech.WEB/Views/Shared/PartialFooter.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/eray/RiderProjects/Lifetech.WEB/Lifetech.WEB/Views/Shared/PartialFooter.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/eray/RiderProjects/Lifetech.WEB/Lifetech.WEB/Views/Shared/PartialFooter.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/eray/RiderProjects/Lifetech.WEB/Lifetech.WEB/Views/Shared/PartialFooter.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -50,8 +53,12 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.Lifetech.WEB: http">
+  <component name="RunManager" selected="Publish to folder.Publish Lifetech.WEB to folder (2)">
     <configuration name="Publish Lifetech.WEB to folder (1)" type="DotNetFolderPublish" factoryName="Publish to folder" editBeforeRun="true">
+      <riderPublish configuration="Release" platform="Any CPU" runtime="Portable" target_folder="$USER_HOME$/Desktop/publish again" target_framework="net7.0" uuid_high="-1601465460812722461" uuid_low="-7546146440157200258" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Publish Lifetech.WEB to folder (2)" type="DotNetFolderPublish" factoryName="Publish to folder" editBeforeRun="true">
       <riderPublish configuration="Release" platform="Any CPU" runtime="Portable" target_folder="$USER_HOME$/Desktop/publish again" target_framework="net7.0" uuid_high="-1601465460812722461" uuid_low="-7546146440157200258" />
       <method v="2" />
     </configuration>
